@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Hari Jadian!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(asset/background1.jpg);
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        .container {
+            background-image: url(asset/background2.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            color: white;
+        }
+        h1 {
+            color: grey;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: grey;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Selamat Tangal 30 Sayangkuu</h1>
+    <p>Hari ini adalah hari yang spesial untuk kita.</p>
+    <p>Ngga Kerasa Yaa Sudah 17 Bulan Kita Bersama xixi.</p>
+    
+
+    <button id="show-message-btn">Coba Klik ini Sayang</button>
+    <p id="hidden-message" class="hidden-message">Semoga kedepannya kita tetap bersama terus ya sayang, kita jaga hubungan ini baik baik yahh, aku ngga nyangka aku kita sudah sejauh ini berjuang bareng-bareng anjayyyy. Maaf ya sayang klo kadang sikap aku suka bikin kamu betmut, sedih, marah, kecewa. Tapi aku bangga sama kamu, sesabar itu kamu ngadepin sikap aku heheh maaciii yaa sayangkuuu cintakuu, maacciii sudah ngasih perhatian lebih ke aku, sudah nurutin apa yang aku mau.Tetep sama aku terus ya sayang huhu support aku terus yahh cantikk tujuan aku dsni ingin membahagiakan kamuuu. Lesgowww kita berjuang sama-sama sayang walaupun nnti ada masalah yg datang kita selesaikan baik-baik ya sayang, kita cari jalan keluarnya xixi. Sekali lagi maacii sayang sudah selalu ada buat aku cma kamu penyemangat aku. Sehat-sehat yaa anak cantikkk jangan telat makan yahh jaga kesehatann jangan marah klo disuruh sama yg lebih tuaa ya sayangkuuu. Babayyy sayangku yang manis yang cantik yang imutttt LOVE YOUU SO MUCHHH.</p>
+    <dl>
+        <dt><strong id="tanggal-jadian"></strong></dt>
+    </dl>    
+</div>
+
+<script>
+    // Tanggal jadian
+    const tanggalJadian = new Date('2023-07-30'); // Ganti dengan tanggal jadian Anda
+    document.getElementById('tanggal-jadian').innerText = tanggalJadian.toLocaleDateString('id-ID');
+
+    // Menampilkan pesan tersembunyi
+    document.getElementById('show-message-btn').addEventListener('click', function() {
+        const hiddenMessage = document.getElementById('hidden-message');
+        if (hiddenMessage.style.display === 'none' || hiddenMessage.style.display === '') {
+            hiddenMessage.style.display = 'block';
+            this.innerText = 'Hayy Sayangkuu';
+        } else {
+            hiddenMessage.style.display = 'none';
+            this.innerText = 'Coba Klik ini Sayang';
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
